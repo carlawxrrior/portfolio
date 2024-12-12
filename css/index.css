@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Ambit Black";
+  src: url("./fonts/Ambit-Black.woff2") format(woff2);
+  font-weight: normal; /* Opcional: peso de la fuente */
+  font-style: normal; /* Opcional: estilo de la fuente */
+}
+
+@font-face {
+  font-family: "Ambit Bold";
+  src: url("./fonts/Ambit-Bold.woff2") format(woff2);
+  font-weight: bold; /* Opcional: peso de la fuente */
+  font-style: bold; /* Opcional: estilo de la fuente */
+}
+
+@font-face {
+  font-family: "Ambit Regular";
+  src: url("./fonts/Ambit-Regular.woff2") format(woff2);
+  font-weight: normal; /* Opcional: peso de la fuente */
+  font-style: normal; /* Opcional: estilo de la fuente */
+}
+
+@font-face {
+  font-family: "Ambit Light";
+  src: url("./fonts/ambit-light.woff") format(woff2);
+}
+
+@font-face {
+  font-family: "Ambit Thin";
+  src: url("./fonts/ambit-thin.woff") format(woff2);
+  font-weight: thin; /* Opcional: peso de la fuente */
+  font-style: thin; /* Opcional: estilo de la fuente */
+}
+
+body {
+  font-family: "Ambit Regular", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Ambit Bold", sans-serif;
+}
