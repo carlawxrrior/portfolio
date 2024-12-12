@@ -4,51 +4,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mi Portfolio</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <!-- Agregar Font Awesome -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
+      rel="stylesheet"
+    />
   </head>
-
   <body>
-    <!-- Menú hamburguesa -->
     <header>
-      <button class="hamburger">☰</button>
-      <div class="logo">
-        <a href="index.html">
-          <h1>Carla</h1>
-          <!-- Aquí pondrás tu logo de texto -->
-        </a>
+      <div class="top-bar">
+        <div class="logo">Mi Logo</div>
+        <!-- Aquí podrás agregar tu logo cuando lo tengas -->
+        <nav>
+          <ul class="main-nav">
+            <li><a href="#home">Portfolio</a></li>
+            <li><i class="fas fa-star"></i></li>
+            <!-- Ícono de barra vertical -->
+            <li><a href="#about">Ilustración</a></li>
+            <li><i class="fas fa-star"></i></li>
+            <!-- Ícono de barra vertical -->
+            <li><a href="#projects">Diseño Gráfico</a></li>
+            <li><i class="fas fa-star"></i></li>
+            <!-- Ícono de barra vertical -->
+            <li><a href="#contact">UX/UI</a></li>
+            <li><i class="fas fa-star"></i></li>
+            <!-- Ícono de barra vertical -->
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav class="menu">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
     </header>
 
-    <!-- Página principal con texto descriptivo -->
-    <section id="inicio">
-      <h1>Bienvenido a mi Portfolio</h1>
+    <section id="home" class="section">
+      <h1>Bienvenid@ a mi portfolio</h1>
       <p>
-        Hola, soy Carla Hurtado, una diseñadora gráfica e ilustradora apasionada
-        por crear experiencias visuales impactantes. Aquí podrás ver algunos de
-        mis trabajos y conocerme más. ¡Gracias por visitar!
+        ¡Soy un diseñador gráfico e ilustrador apasionado por crear proyectos
+        únicos!
+      </p>
+    </section>
+
+    <section id="illustration" class="section">
+      <h2>Ilustración</h2>
+      <p>Aquí podrás ver algunos de mis trabajos en ilustración.</p>
+    </section>
+
+    <section id="graphic-design" class="section">
+      <h2>Diseño Gráfico</h2>
+      <p>
+        Descubre mi portafolio de diseño gráfico, desde logotipos hasta
+        composiciones visuales.
+      </p>
+    </section>
+
+    <section id="ux-ui" class="section">
+      <h2>UX/UI</h2>
+      <p>
+        Explora mis proyectos en diseño de experiencia de usuario y interfaz de
+        usuario (UX/UI).
+      </p>
+    </section>
+
+    <section id="about" class="section">
+      <h2>Sobre mí</h2>
+      <p>
+        Tengo 26 años y me especializo en diseño gráfico e ilustración. Trabajo
+        creando experiencias visuales que cuentan historias y conectan con las
+        personas.
       </p>
     </section>
 
     <footer>
-      <p>&copy; 2024 Carla Hurtado. Todos los derechos reservados.</p>
+      <p>&copy; 2024 Carla Hurtado.</p>
     </footer>
 
-    <!-- Botón para subir -->
-    <button
-      class="back-to-top"
-      id="scrollToTopBtn"
-      aria-label="Subir al inicio"
-    >
-      ↑
-    </button>
+    <!-- Flecha -->
+    <div id="scrollButton" class="scroll-btn">
+      <i class="fas fa-arrow-up"></i>
+    </div>
 
-    <script src="./css/scripts/scripts.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

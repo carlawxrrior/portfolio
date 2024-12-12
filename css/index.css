@@ -1,41 +1,184 @@
-@font-face {
-  font-family: "Ambit Black";
-  src: url("./fonts/Ambit-Black.woff2") format(woff2);
-  font-weight: normal; /* Opcional: peso de la fuente */
-  font-style: normal; /* Opcional: estilo de la fuente */
+/* Otros estilos de la página... */
+
+/* Tipografía en los encabezados */
+h1,
+h2 {
+  font-family: "DM Serif Text", serif; /* Usar DM Serif Text en los encabezados */
+  color: #4a1f80;
 }
 
-@font-face {
-  font-family: "Ambit Bold";
-  src: url("./fonts/Ambit-Bold.woff2") format(woff2);
-  font-weight: bold; /* Opcional: peso de la fuente */
-  font-style: bold; /* Opcional: estilo de la fuente */
+/* Tipografía en el logo o texto destacado */
+.logo {
+  font-family: "DM Serif Text", serif; /* Usar DM Serif Text en el logo */
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4a1f80;
 }
 
-@font-face {
-  font-family: "Ambit Regular";
-  src: url("./fonts/Ambit-Regular.woff2") format(woff2);
-  font-weight: normal; /* Opcional: peso de la fuente */
-  font-style: normal; /* Opcional: estilo de la fuente */
-}
+/* Resto de los estilos */
 
-@font-face {
-  font-family: "Ambit Light";
-  src: url("./fonts/ambit-light.woff") format(woff2);
-}
-
-@font-face {
-  font-family: "Ambit Thin";
-  src: url("./fonts/ambit-thin.woff") format(woff2);
-  font-weight: thin; /* Opcional: peso de la fuente */
-  font-style: thin; /* Opcional: estilo de la fuente */
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "Ambit Regular", sans-serif;
+  font-family: "DM Serif Text", serif;
+  background-color: #fef6e4; /* Color cálido de fondo */
+  color: #4a1f80; /* Morado cálido para el texto */
+  line-height: 1.6;
+  scroll-behavior: smooth; /* Habilitar el desplazamiento suave */
+}
+
+/* Top Bar */
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffcc00; /* Amarillo cálido */
+  height: 100px;
+  padding: 0 20px;
+}
+
+.top-bar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #4a1f80;
+}
+
+/* Navigation Bar in Top Bar */
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: #4a1f80;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: #ffcc00;
+}
+
+/* Main Navigation */
+.main-nav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #ffcc00;
+  padding: 10px 0;
+}
+
+.main-nav li {
+  margin: 0 20px;
+}
+
+.main-nav a {
+  color: #4a1f80;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  color: #ffcc00;
+}
+
+/* Sections */
+.section {
+  height: 100vh; /* Asegura que cada sección ocupe toda la altura de la pantalla */
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
 }
 
 h1,
 h2 {
-  font-family: "Ambit Bold", sans-serif;
+  color: #4a1f80;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #4a1f80;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fef6e4;
+  color: #4a1f80;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Scroll Button FLECHA*/
+.scroll-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background-color: #4a1f80;
+  color: white;
+  border: none;
+  border-radius: 50%; /* Haciendo el fondo circular */
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0; /* Inicialmente está oculto */
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.scroll-btn:hover {
+  background-color: #ffcc00; /* Cambio de color al pasar el mouse */
+}
+
+/* Aparecer cuando se haga scroll */
+.show {
+  opacity: 1;
+}
+
+/* Animación de la flecha al hacer clic */
+.scroll-btn.clicked {
+  background-color: #ffcc00; /* Cambia el color de la flecha cuando se haga clic */
+}
+
+.scroll-btn i {
+  transition: transform 0.3s;
+}
+
+/* Efecto de rotación cuando se hace clic */
+.scroll-btn.clicked i {
+  transform: rotate(180deg); /* La flecha gira al hacer clic */
 }
