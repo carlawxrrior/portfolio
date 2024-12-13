@@ -5,14 +5,6 @@
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Mi Portfolio</title>
-      <!-- Font Awesome -->
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-dyPhbEs20pUPOk2bngvMnHjP61oFUC5tG0n45ILZAA/qK+RtqWVVJbWbc0zVRt0NqxKXsUcJUPiZ1ihcJ9E+Yg=="
-        crossorigin="anonymous"
-        referrerpolicy="no-referrer"
-      />
       <!-- Google Fonts -->
       <link
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap"
@@ -20,79 +12,90 @@
       />
       <!-- CSS -->
       <link rel="stylesheet" href="./css/index.css" />
-  </head>
-  <body>
-    <header>
-      <div class="top-bar">
-        <div class="logo">Mi Logo</div>
-        <!-- Aquí podrás agregar tu logo cuando lo tengas -->
-        <nav>
-          <ul class="main-nav">
-            <li><a href="#home">Portfolio</a></li>
-            <li><i class="fas fa-star"></i></li>
-            <!-- Ícono de estrella -->
-            <li><a href="#illustration">Ilustración</a></li>
-            <li><i class="fas fa-star"></i></li>
-            <!-- Ícono de estrella -->
-            <li><a href="#graphic-design">Diseño Gráfico</a></li>
-            <li><i class="fas fa-star"></i></li>
-            <!-- Ícono de estrella -->
-            <li><a href="#ux-ui">UX/UI</a></li>
-            <li><i class="fas fa-star"></i></li>
-            <!-- Ícono de estrella -->
-            <li><a href="#about">Contacto</a></li>
-          </ul>
-        </nav>
+    </head>
+    <body>
+      <header>
+        <div class="top-bar">
+          <div class="logo">Mi Logo</div>
+          <!-- Aquí podrás agregar tu logo cuando lo tengas -->
+          <nav>
+            <ul class="main-nav">
+              <li><a href="#home">Portfolio</a></li>
+              <li>★</li>
+              <!-- Ícono de estrella -->
+              <li><a href="#illustration">Ilustración</a></li>
+              <li>★</li>
+              <!-- Ícono de estrella -->
+              <li><a href="#graphic-design">Diseño Gráfico</a></li>
+              <li>★</li>
+              <!-- Ícono de estrella -->
+              <li><a href="#ux-ui">UX/UI</a></li>
+              <li>★</li>
+              <!-- Ícono de estrella -->
+              <li><a href="#about">Contacto</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <section id="home" class="section">
+        <h1>Bienvenid@ a mi portfolio</h1>
+        <p>
+          ¡Soy un diseñador gráfico e ilustrador apasionado por crear proyectos
+          únicos!
+        </p>
+      </section>
+
+      <section id="illustration" class="section">
+        <h2>Ilustración</h2>
+        <p>Aquí podrás ver algunos de mis trabajos en ilustración.</p>
+      </section>
+
+      <section id="graphic-design" class="section">
+        <h2>Diseño Gráfico</h2>
+        <p>
+          Descubre mi portafolio de diseño gráfico, desde logotipos hasta
+          composiciones visuales.
+        </p>
+      </section>
+
+      <section id="ux-ui" class="section">
+        <h2>UX/UI</h2>
+        <p>
+          Explora mis proyectos en diseño de experiencia de usuario y interfaz
+          de usuario (UX/UI).
+        </p>
+      </section>
+
+      <section id="about" class="section">
+        <h2>Sobre mí</h2>
+        <p>
+          Tengo 26 años y me especializo en diseño gráfico e ilustración.
+          Trabajo creando experiencias visuales que cuentan historias y conectan
+          con las personas.
+        </p>
+      </section>
+
+      <footer>
+        <p>&copy; 2024 Carla Hurtado.</p>
+      </footer>
+
+      <!-- Flecha para subir arriba -->
+      <div id="scrollButton" class="scroll-btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+          fill="white"
+        >
+          <path
+            d="M12 2C11.4477 2 11 2.4477 11 3V16.5858L8.7071 14.2929C8.3166 13.9024 7.6834 13.9024 7.2929 14.2929C6.9024 14.6834 6.9024 15.3166 7.2929 15.7071L12 20.4142L16.7071 15.7071C17.0976 15.3166 17.0976 14.6834 16.7071 14.2929C16.3166 13.9024 15.6834 13.9024 15.2929 14.2929L13 16.5858V3C13 2.4477 12.5523 2 12 2Z"
+          />
+        </svg>
       </div>
-    </header>
 
-    <section id="home" class="section">
-      <h1>Bienvenid@ a mi portfolio</h1>
-      <p>
-        ¡Soy un diseñador gráfico e ilustrador apasionado por crear proyectos
-        únicos!
-      </p>
-    </section>
-
-    <section id="illustration" class="section">
-      <h2>Ilustración</h2>
-      <p>Aquí podrás ver algunos de mis trabajos en ilustración.</p>
-    </section>
-
-    <section id="graphic-design" class="section">
-      <h2>Diseño Gráfico</h2>
-      <p>
-        Descubre mi portafolio de diseño gráfico, desde logotipos hasta
-        composiciones visuales.
-      </p>
-    </section>
-
-    <section id="ux-ui" class="section">
-      <h2>UX/UI</h2>
-      <p>
-        Explora mis proyectos en diseño de experiencia de usuario y interfaz de
-        usuario (UX/UI).
-      </p>
-    </section>
-
-    <section id="about" class="section">
-      <h2>Sobre mí</h2>
-      <p>
-        Tengo 26 años y me especializo en diseño gráfico e ilustración. Trabajo
-        creando experiencias visuales que cuentan historias y conectan con las
-        personas.
-      </p>
-    </section>
-
-    <footer>
-      <p>&copy; 2024 Carla Hurtado.</p>
-    </footer>
-
-    <!-- Flecha -->
-    <div id="scrollButton" class="scroll-btn">
-      <i class="fas fa-arrow-up"></i>
-    </div>
-
-    <script src="script.js"></script>
-  </body>
+      <script src="./scripts/script.js"></script>
+    </body>
+  </head>
 </html>

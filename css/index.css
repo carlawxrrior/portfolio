@@ -15,11 +15,16 @@ body {
 
 /* Top Bar */
 .top-bar {
+  position: fixed; /* Fija el top-bar en la parte superior */
+  top: 0; /* Asegura que esté en la parte superior */
+  left: 0; /* Asegura que esté alineado a la izquierda */
+  width: 100%; /* Hace que el top-bar ocupe todo el ancho de la pantalla */
+  z-index: 1000; /* Lo mantiene por encima de otros elementos */
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffcc00;
-  height: 100px;
+  height: 6.25rem;
   padding: 0 20px;
 }
 
@@ -27,6 +32,8 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   color: #4a1f80;
+  margin-left: 6rem;
+  margin-right: 1.5rem;
 }
 
 /* Navigation Bar */
@@ -52,9 +59,11 @@ body {
   list-style: none;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente fila */
+  margin-right: 3rem;
   background-color: #ffcc00;
-  padding: 10px 0;
-  gap: 20px; /* Espaciado entre enlaces */
+  padding: 1rem 0;
+  gap: 1rem; /* Espaciado entre enlaces */
 }
 
 .main-nav a {
@@ -64,7 +73,19 @@ body {
 }
 
 .main-nav a:hover {
-  color: #ffcc00;
+  color: #b88bf0;
+}
+
+/* Estilos para las estrellas del menú */
+.main-nav i {
+  color: #4a1f80; /* Color de las estrellas */
+  font-size: 1rem; /* Tamaño de las estrellas */
+  margin: 0 5px; /* Espaciado horizontal */
+  transition: color 0.3s ease; /* Transición para cambios de color */
+}
+
+.main-nav i:hover {
+  color: #ffcc00; /* Cambia a amarillo al pasar el ratón */
 }
 
 /* Sections */
@@ -97,40 +118,48 @@ footer {
   padding: 10px 0;
 }
 
-/* Scroll Button */
+/* Círculo de la flecha */
 .scroll-btn {
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   background-color: #4a1f80;
-  color: white;
+  color: #ffcc00;
   border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  border-radius: 50%; /* Hace que el fondo sea circular */
+  width: 60px; /* Tamaño del círculo */
+  height: 60px; /* Tamaño del círculo */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center; /* Centra el contenido verticalmente */
+  justify-content: center; /* Centra el contenido horizontalmente */
   font-size: 1.5rem;
   cursor: pointer;
-  opacity: 0; /* Oculto inicialmente */
+  opacity: 0; /* Inicialmente está oculto */
   transition: opacity 0.3s, background-color 0.3s;
+  transform: rotate(180deg);
 }
 
-.scroll-btn:hover {
-  background-color: #ffcc00;
-}
-
-.show {
+/* Aparece cuando se hace scroll */
+.scroll-btn.show {
   opacity: 1;
 }
 
-.scroll-btn i {
-  transition: transform 0.3s;
+/* Estilo del SVG */
+.scroll-btn svg {
+  width: 32px; /* Tamaño de la flecha */
+  height: 32px; /* Tamaño de la flecha */
+  fill: #e8d5ff; /* Color de la flecha */
+  transition: fill 0.3s; /* Transición suave al interactuar */
 }
 
-.scroll-btn.clicked i {
-  transform: rotate(180deg); /* Efecto al hacer clic */
+/* Cambio de color al pasar el ratón */
+.scroll-btn:hover svg {
+  fill: #ffcc00; /* Cambia el color de la flecha al pasar el mouse */
+}
+
+/* Animación de rotación cuando se hace clic */
+.scroll-btn.clicked svg {
+  transform: rotate(180deg); /* La flecha gira al hacer clic */
 }
 
 /* Responsividad */
