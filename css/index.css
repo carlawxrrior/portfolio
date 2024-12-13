@@ -1,22 +1,3 @@
-/* Otros estilos de la página... */
-
-/* Tipografía en los encabezados */
-h1,
-h2 {
-  font-family: "DM Serif Text", serif; /* Usar DM Serif Text en los encabezados */
-  color: #4a1f80;
-}
-
-/* Tipografía en el logo o texto destacado */
-.logo {
-  font-family: "DM Serif Text", serif; /* Usar DM Serif Text en el logo */
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: #4a1f80;
-}
-
-/* Resto de los estilos */
-
 /* General Styles */
 * {
   margin: 0;
@@ -26,10 +7,10 @@ h2 {
 
 body {
   font-family: "DM Serif Text", serif;
-  background-color: #fef6e4; /* Color cálido de fondo */
-  color: #4a1f80; /* Morado cálido para el texto */
+  background-color: #fef6e4;
+  color: #4a1f80;
   line-height: 1.6;
-  scroll-behavior: smooth; /* Habilitar el desplazamiento suave */
+  scroll-behavior: smooth;
 }
 
 /* Top Bar */
@@ -37,7 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #ffcc00; /* Amarillo cálido */
+  background-color: #ffcc00;
   height: 100px;
   padding: 0 20px;
 }
@@ -48,24 +29,21 @@ body {
   color: #4a1f80;
 }
 
-/* Navigation Bar in Top Bar */
+/* Navigation Bar */
 .nav-list {
   list-style: none;
   display: flex;
+  gap: 15px; /* Espaciado entre elementos */
 }
 
-.nav-list li {
-  margin: 0 15px;
-}
-
-.nav-list a {
+.nav-list li a {
   color: #4a1f80;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-.nav-list a:hover {
+.nav-list li a:hover {
   color: #ffcc00;
 }
 
@@ -76,10 +54,7 @@ body {
   justify-content: center;
   background-color: #ffcc00;
   padding: 10px 0;
-}
-
-.main-nav li {
-  margin: 0 20px;
+  gap: 20px; /* Espaciado entre enlaces */
 }
 
 .main-nav a {
@@ -94,27 +69,24 @@ body {
 
 /* Sections */
 .section {
-  height: 100vh; /* Asegura que cada sección ocupe toda la altura de la pantalla */
+  height: 100vh; /* Cada sección ocupa toda la altura de la pantalla */
   padding: 40px 20px;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
-}
-
-h1,
-h2 {
-  color: #4a1f80;
+  justify-content: center;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* Tamaño fluido */
   margin-bottom: 20px;
+  color: #4a1f80;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Tamaño fluido */
   margin-bottom: 20px;
+  color: #4a1f80;
 }
 
 /* Footer */
@@ -125,22 +97,7 @@ footer {
   padding: 10px 0;
 }
 
-/* General Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #fef6e4;
-  color: #4a1f80;
-  line-height: 1.6;
-  scroll-behavior: smooth;
-}
-
-/* Scroll Button FLECHA*/
+/* Scroll Button */
 .scroll-btn {
   position: fixed;
   bottom: 20px;
@@ -148,7 +105,7 @@ body {
   background-color: #4a1f80;
   color: white;
   border: none;
-  border-radius: 50%; /* Haciendo el fondo circular */
+  border-radius: 50%;
   width: 50px;
   height: 50px;
   display: flex;
@@ -156,29 +113,96 @@ body {
   justify-content: center;
   font-size: 1.5rem;
   cursor: pointer;
-  opacity: 0; /* Inicialmente está oculto */
+  opacity: 0; /* Oculto inicialmente */
   transition: opacity 0.3s, background-color 0.3s;
 }
 
 .scroll-btn:hover {
-  background-color: #ffcc00; /* Cambio de color al pasar el mouse */
+  background-color: #ffcc00;
 }
 
-/* Aparecer cuando se haga scroll */
 .show {
   opacity: 1;
-}
-
-/* Animación de la flecha al hacer clic */
-.scroll-btn.clicked {
-  background-color: #ffcc00; /* Cambia el color de la flecha cuando se haga clic */
 }
 
 .scroll-btn i {
   transition: transform 0.3s;
 }
 
-/* Efecto de rotación cuando se hace clic */
 .scroll-btn.clicked i {
-  transform: rotate(180deg); /* La flecha gira al hacer clic */
+  transform: rotate(180deg); /* Efecto al hacer clic */
+}
+
+/* Responsividad */
+
+/* Tablet y pantallas medianas */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px; /* Separación entre elementos */
+  }
+
+  .nav-list {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .section {
+    padding: 30px 10px;
+  }
+
+  h1 {
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+  }
+}
+
+/* Móviles y pantallas pequeñas */
+@media (max-width: 480px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list,
+  .main-nav {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .scroll-btn {
+    bottom: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
 }
