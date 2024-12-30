@@ -1,0 +1,9 @@
+# Dependencias de Visual Studio Code
+.vscode/
+
+# Archivos de compilación (en caso de que uses un preprocesador CSS o JavaScript)
+node_modules/
+
+# Archivos de configuración de sistemas operativos
+.DS_Store
+Thumbs.db
