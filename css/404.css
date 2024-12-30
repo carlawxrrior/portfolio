@@ -1,0 +1,65 @@
+/* Reset de estilo básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo global */
+body {
+  font-family: "DM Serif Text", serif;
+  background-color: #f5e4a9; /* Amarillo cálido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: #4b1e5a; /* Morado oscuro */
+}
+
+/* Contenedor del error */
+.error-404 {
+  background-color: #f5e4a9;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* Imagen */
+.error-img {
+  max-width: 50%;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
+/* Título */
+.error-404 h1 {
+  font-size: 6rem;
+  color: #9b59b6; /* Morado más claro */
+  margin-bottom: 1rem;
+}
+
+/* Descripción */
+.error-404 p {
+  font-size: 1.5rem;
+  color: #4b1e5a; /* Morado oscuro */
+}
+
+/* Enlace */
+.error-404 a {
+  font-size: 1.5rem;
+  color: #9b59b6; /* Morado más claro */
+  text-decoration: none;
+  border: 2px solid #9b59b6;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin-top: 2rem; /* Añade espacio arriba del enlace */
+  display: inline-block; /* Para que el margen se aplique correctamente */
+}
+
+.error-404 a:hover {
+  background-color: #9b59b6;
+  color: #fff;
+}
