@@ -63,3 +63,27 @@ body {
   background-color: #9b59b6;
   color: #fff;
 }
+
+.error-img {
+  animation: tilt 2s ease-in-out infinite;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
