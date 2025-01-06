@@ -12,7 +12,7 @@ html {
 body {
   font-family: "DM Serif Text", serif;
   background-color: #fef6e4;
-  color: #4a1f80;
+  color: #905bb5;
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 .main-nav a {
-  color: #4a1f80;
+  color: #905bb5;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
@@ -72,14 +72,17 @@ body {
 /* Landing Page Styles */
 #landing {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* Asegura que ocupe toda la altura de la ventana */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centra horizontalmente el contenido */
+  align-items: center;
   text-align: center;
   background-color: #ffd21f;
   z-index: 10;
   transition: opacity 0.3s ease;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  min-height: 100vh; /* Asegura que la sección tenga al menos el 100% de la altura de la ventana */
 }
 
 #landing.hide {
@@ -96,8 +99,8 @@ body {
 }
 
 .logo-image {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* La imagen no puede exceder el 100% del ancho del contenedor */
+  max-height: 500px; /* La altura máxima será 500px */
 }
 
 /* Main Navigation centrado en la parte inferior del landing */
@@ -113,7 +116,7 @@ body {
 }
 
 #landing .main-nav a {
-  color: #4a1f80;
+  color: #905bb5;
   text-decoration: none;
   font-weight: bold;
 }
@@ -136,11 +139,11 @@ body {
 h1,
 h2 {
   font-size: clamp(2rem, 5vw, 3rem);
-  color: #4a1f80;
+  color: #905bb5;
 }
 
 footer {
-  background-color: #4a1f80;
+  background-color: #905bb5;
   color: white;
   text-align: center;
   padding: 10px 0;
@@ -151,7 +154,7 @@ footer {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #4a1f80;
+  background-color: #905bb5;
   color: #ffcc00;
   border: none;
   border-radius: 50%; /* Hace que el fondo sea circular */
