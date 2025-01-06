@@ -1,3 +1,38 @@
+@font-face {
+  font-family: "Ambit";
+  src: url("../assets/fonts/Ambit Regular.woff2") format("woff2");
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ambit";
+  src: url("../assets/fonts/Ambit Bold.woff2") format("woff2");
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ambit";
+  src: url("../assets/fonts/Ambit Italic.woff2") format("woff2");
+  font-weight: 400; /* Regular Italic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Ambit";
+  src: url("../assets/fonts/Ambit Thin.woff2") format("woff2");
+  font-weight: 300; /* Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ambit";
+  src: url("../assets/fonts/Ambit Black.woff2") format("woff2");
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
 /* General Styles */
 * {
   margin: 0;
@@ -10,7 +45,7 @@ html {
 }
 
 body {
-  font-family: "DM Serif Text", serif;
+  font-family: "Ambit", sans-serif;
   background-color: #fef6e4;
   color: #905bb5;
   line-height: 1.6;
@@ -136,10 +171,34 @@ body {
   background-color: #fef6e4;
 }
 
-h1,
+h1 {
+  font-family: "Ambit", sans-serif;
+  font-weight: 900; /* Black */
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño ajustable según la pantalla */
+  color: #905bb5; /* Color del texto */
+  line-height: 1.2; /* Espaciado entre líneas */
+  text-align: center; /* Centrado del texto */
+}
+
 h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  color: #905bb5;
+  font-family: "Ambit", sans-serif;
+  font-weight: 900; /* Black */
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Ambit", sans-serif;
+  font-weight: 700; /* Bold para encabezados */
+}
+
+em {
+  font-family: "Ambit", sans-serif;
+  font-style: italic; /* Para cursiva */
+}
+
+small {
+  font-family: "Ambit", sans-serif;
+  font-weight: 300; /* Thin para texto pequeño */
 }
 
 footer {
