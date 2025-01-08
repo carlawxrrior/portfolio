@@ -116,7 +116,7 @@ body {
   z-index: 10;
   transition: opacity 0.3s ease;
   padding-top: 1rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   min-height: 100vh; /* Asegura que la sección tenga al menos el 100% de la altura de la ventana */
 }
 
@@ -160,18 +160,25 @@ body {
   color: #ffcc00;
 }
 
+/* Ajuste de la sección de ilustración */
+#illustration {
+  margin-top: 0; /* Elimina el margen superior si hay alguno */
+  padding-top: 0; /* Elimina el padding superior */
+}
+
 /* Secciones */
 .section {
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 0 20px 40px; /* Removido el padding-top para que el texto empiece más arriba */
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start; /* Alineación del contenido al inicio de la sección */
   background-color: #fef6e4;
 }
 
 h1 {
+  margin-top: 0; /* Elimina cualquier margen superior si es necesario */
   font-family: "Ambit", sans-serif;
   font-weight: 900; /* Black */
   font-size: clamp(2.5rem, 5vw, 4rem); /* Tamaño ajustable según la pantalla */
@@ -206,6 +213,67 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
+}
+
+/* Contenedor de la galería */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  gap: 16px; /* Espacio entre las imágenes */
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Opcional: para bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra para las imágenes */
+  transition: transform 0.3s ease;
+}
+
+/* Estilo base de la galería de 3x3 */
+.gallery-3x3 {
+  display: grid; /* Usamos grid para organizar las imágenes */
+  grid-template-columns: repeat(3, 1fr); /* Siempre 3 columnas */
+  grid-template-rows: repeat(3, 1fr); /* Siempre 3 filas */
+  gap: 16px; /* Espacio entre las imágenes */
+  margin-top: 2rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.gallery-image {
+  width: 100%; /* Las imágenes ocupan todo el espacio disponible */
+  height: auto; /* Mantienen su proporción */
+  object-fit: cover; /* Ajusta la imagen para rellenar el espacio */
+  border-radius: 8px; /* Opcional: Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Sombra */
+}
+
+/* Efecto hover para las imágenes */
+.gallery-image:hover {
+  transform: scale(1.05); /* Efecto de agrandar al pasar el ratón */
+}
+
+/* Estilo base de la galería */
+.gallery-two {
+  display: flex; /* Alinea las imágenes horizontalmente */
+  gap: 16px; /* Espacio entre las imágenes */
+  justify-content: center; /* Centra las imágenes horizontalmente */
+  align-items: center; /* Asegura que estén alineadas verticalmente */
+  margin-top: 2rem; /* Espacio de 2rem respecto al texto superior */
+}
+
+/* Estilo de las imágenes */
+.gallery-two .gallery-image {
+  width: 100%; /* Las imágenes se ajustan al contenedor */
+  max-width: 20rem; /* Tamaño máximo de 200px para evitar que sean muy grandes */
+  height: auto; /* Mantienen la proporción */
+  object-fit: cover; /* Ajusta la imagen para rellenar su espacio */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
 /* Círculo de la flecha */
@@ -250,6 +318,108 @@ footer {
 /* Animación de rotación cuando se hace clic */
 .scroll-btn.clicked svg {
   transform: rotate(180deg); /* La flecha gira al hacer clic */
+}
+
+/* Modo Día (predeterminado) */
+body {
+  background-color: #fef6e4; /* Color de fondo claro */
+  color: #905bb5; /* Color del texto oscuro */
+}
+
+.top-bar {
+  background-color: #ffcc00; /* Barra superior amarilla */
+}
+
+/* Modo Noche */
+body.night-mode {
+  background-color: #2c3e50; /* Color de fondo oscuro */
+  color: #ecf0f1; /* Color del texto claro */
+}
+
+.top-bar.night-mode {
+  background-color: #34495e; /* Barra superior más oscura */
+}
+
+/* Estilos generales para el botón */
+#toggle-mode {
+  background-color: #fff; /* Fondo blanco */
+  border: 2px solid #333; /* Borde negro */
+  width: 60px; /* Ancho del botón */
+  height: 30px; /* Alto del botón */
+  border-radius: 50px; /* Esquinas redondeadas */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed; /* Lo hace fijo en la pantalla */
+  bottom: 20px; /* 20px desde la parte inferior */
+  left: 20px; /* 20px desde la parte izquierda */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  cursor: pointer;
+  padding: 0; /* Elimina cualquier padding */
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* El contenedor del círculo dentro del botón */
+.switch {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/* El círculo que se moverá */
+.circle {
+  width: 24px; /* Círculo de 24px */
+  height: 24px; /* Círculo de 24px */
+  background-color: #333; /* Círculo negro */
+  border-radius: 50%;
+  position: absolute;
+  left: 2px; /* El círculo comienza 3px desde el borde izquierdo */
+  transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+/* Modo noche: el círculo se mueve hacia la derecha */
+#toggle-mode.night-mode {
+  background-color: #333; /* Fondo negro cuando es modo noche */
+  border-color: #fff; /* Borde blanco cuando es modo noche */
+}
+
+#toggle-mode.night-mode .circle {
+  transform: translateX(30px); /* Mueve el círculo a la derecha */
+  background-color: #fff; /* El círculo se vuelve blanco */
+}
+
+/* Sol y luna - íconos */
+#toggle-mode .sun,
+#toggle-mode .moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ffcc00; /* Color negro por defecto */
+  pointer-events: none; /* Evita que se haga clic en los íconos */
+}
+
+#toggle-mode .sun {
+  left: 8px; /* Sol a la izquierda */
+}
+
+#toggle-mode .moon {
+  right: 8px; /* Luna a la derecha */
+  display: none; /* La luna solo aparece en modo noche */
+}
+
+/* Cuando está en modo noche, se muestra el ícono de la luna */
+#toggle-mode.night-mode .moon {
+  display: block;
+  color: #ffcc00; /* Luna de color blanco */
+}
+
+#toggle-mode.night-mode .sun {
+  display: none;
+  color: #ffcc00; /* Sol oculto en modo noche */
 }
 
 /* Responsividad */

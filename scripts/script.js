@@ -44,3 +44,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const toggleButton = document.getElementById("toggle-mode");
+
+const currentMode = localStorage.getItem("mode") || "day";
+
+if (currentMode === "night") {
+  document.body.classList.add("night-mode");
+  toggleButton.classList.add("night-mode");
+}
+
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("night-mode");
+  toggleButton.classList.toggle("night-mode");
+
+  if (document.body.classList.contains("night-mode")) {
+    localStorage.setItem("mode", "night");
+  } else {
+    localStorage.setItem("mode", "day");
+  }
+});
