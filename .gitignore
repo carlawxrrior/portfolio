@@ -1,9 +1,27 @@
-# Dependencias de Visual Studio Code
-.vscode/
-
-# Archivos de compilación (en caso de que uses un preprocesador CSS o JavaScript)
-node_modules/
-
-# Archivos de configuración de sistemas operativos
+# Archivos de sistema
 .DS_Store
 Thumbs.db
+
+# Archivos de dependencias de Node (si usas Node.js)
+node_modules/
+
+# Archivos generados por el entorno de desarrollo
+.vscode/
+.idea/
+
+# Archivos de salida de compiladores/transpiladores
+dist/
+build/
+
+# Archivos de logs
+*.log
+
+# Archivos de configuración de entorno
+.env
+
+# Archivos de cache de navegadores
+.cache/
+
+# Archivos temporales del editor
+*.swp
+*~

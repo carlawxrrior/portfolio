@@ -1,74 +1,70 @@
-# # Portfolio Personal
+# Portfolio Personal
 
-Este repositorio contiene el código fuente de mi portfolio personal, diseñado para mostrar mis habilidades y proyectos en diseño gráfico, ilustración y UX/UI. El diseño del sitio sigue una estética elegante y minimalista con una paleta cálida de amarillos y morados.
+Este es el portfolio personal de [Tu Nombre], un diseñador gráfico e ilustrador. El sitio está construido utilizando HTML y CSS, con un diseño elegante y minimalista en tonos cálidos de amarillo y morado.
 
-## Características del Sitio
+## Descripción
 
-- **Landing Page Interactiva:** Contiene un logo centrado y navegación accesible.
-- **Top Bar Dinámica:** Aparece al hacer scroll, con navegación hacia las distintas secciones del sitio.
-- **Desplazamiento Suave:** Permite una experiencia fluida al navegar entre secciones.
-- **Botón de Scroll al Inicio:** Un botón flotante que aparece al desplazarse hacia abajo y permite regresar al inicio.
-- **Responsividad:** El diseño está optimizado para dispositivos móviles, tabletas y escritorios.
+El portfolio tiene un enfoque visual, mostrando proyectos y trabajos de diseño gráfico e ilustración. El sitio incluye una navegación intuitiva y una estructura clara para resaltar los proyectos y la información de contacto.
 
-## Tecnologías Utilizadas
+### Características principales:
 
-- **HTML5:** Para la estructura del sitio.
-- **CSS3:** Para el diseño, utilizando flexbox y media queries para responsividad.
-- **JavaScript:** Para la interactividad, como el desplazamiento suave, el botón de scroll y la barra de navegación dinámica.
+- Diseño minimalista con una paleta de colores cálidos.
+- Navegación fluida con efecto de desplazamiento suave.
+- Secciones interactivas que muestran proyectos e ilustraciones.
+- Formulario de contacto integrado.
+- Funcionalidad de carruseles para mostrar imágenes destacadas.
+
+## Tecnologías
+
+El portfolio fue desarrollado con las siguientes tecnologías:
+
+- **HTML5**: Estructura del contenido.
+- **CSS3**: Estilos y diseño, incluyendo transiciones y efectos visuales.
+- **Google Fonts**: Fuentes personalizadas para mejorar la tipografía.
+
+## Instalación
+
+Para ver el proyecto en tu local, sigue estos pasos:
+
+1. Clona el repositorio:
+
+   ```bash
+   git clone https://github.com/tu-usuario/portfolio.git
+   ```
+
+2. Navega al directorio del proyecto:
+
+   ```bash
+   cd portfolio
+   ```
+
+3. Abre el archivo `index.html` en tu navegador preferido.
 
 ## Estructura del Proyecto
 
-```
-/
-├── index.html         # Archivo principal HTML
-├── styles.css         # Estilos del sitio
-├── script.js          # Archivo JavaScript para funcionalidades dinámicas
-└── assets/            # Carpeta para imágenes, iconos y otros recursos
-```
+portfolio/ │ ├── assets/ │ ├── fonts/ # Fuentes personalizadas │ └── images/ # Imágenes utilizadas en el sitio │ ├── css/ │ └── styles.css # Archivo de estilos principal │ ├── index.html # Página principal ├── about.html # Página sobre mí (si aplica) ├── projects.html # Página con los proyectos └── contact.html # Página de contacto
 
-## Funcionalidades Clave
+## Descripción
 
-1. **Logo en la Landing Page:**
+Este sitio web tiene un diseño minimalista y elegante, utilizando una paleta de colores cálidos en tonos de amarillo y morado. El objetivo es proporcionar una forma sencilla y atractiva de mostrar mi trabajo y mis habilidades.
 
-   - No tiene funcionalidad de enlace.
-   - Mantiene un diseño centrado en la pantalla inicial.
+### Secciones del Portfolio
 
-2. **Logo en la Top Bar:**
+- **Home**: Página principal con un texto descriptivo.
+- **Sobre mí**: Información personal y profesional (si aplica).
+- **Proyectos**: Una lista de mis proyectos anteriores.
+- **Contacto**: Formulario y detalles de contacto.
 
-   - Redirige al usuario a la sección de la landing page cuando se hace click.
+## Tecnologías Utilizadas
 
-3. **Navegación:**
+- **HTML5**: Para la estructura del sitio.
+- **CSS3**: Para el diseño y los estilos visuales.
+- **JavaScript**: Para interactividad (si se necesita).
 
-   - Un menú interactivo que permite desplazarse suavemente hacia las secciones: Ilustración, Diseño Gráfico, UX/UI, y Contacto.
+## Instalación
 
-4. **Estilo Moderno:**
-   - Tipografía: "DM Serif Text", serif.
-   - Colores: Fondo amarillo cálido (#fef6e4) con detalles en morado (#4a1f80) y amarillo (#ffcc00).
-
-## Cómo Usarlo
-
-1. Clona este repositorio:
+1. Clona este repositorio a tu máquina local:
 
    ```bash
-   git clone https://github.com/carlawxrrior/portfolio.git
+   git clone https://github.com/carlawxrrior/portfolio
    ```
-
-2. Abre el archivo `index.html` en tu navegador para visualizar el portfolio.
-
-3. Si deseas realizar cambios:
-   - Edita los archivos `.html`, `.css` o `.js` según sea necesario.
-   - Usa herramientas como Visual Studio Code para un desarrollo más cómodo.
-
-## Próximas Mejoras
-
-- Agregar una sección de proyectos destacados con carrousel interactivo.
-- Optimizar la accesibilidad (WCAG).
-- Implementar un formulario de contacto funcional con integración a correo electrónico.
-
-## Autor
-
-Desarrollado por Carla Hurtado. Puedes contactarme a través de mi carhurcli@gmail.com o en mis redes sociales profesionales @carlawxrrior_art.
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Puedes consultar el archivo LICENSE para más detalles.
