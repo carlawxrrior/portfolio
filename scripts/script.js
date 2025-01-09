@@ -45,22 +45,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-const toggleButton = document.getElementById("toggle-mode");
+// Objeto para almacenar los índices de cada carrusel
+let carouselIndices = {
+  "carousel-kirby": 0,
+  "carousel-lollipop": 0,
+  "carousel-zodiac": 0,
+};
 
-const currentMode = localStorage.getItem("mode") || "day";
+function moveSlide(carouselId, step) {
+  const carousel = document.getElementById(carouselId);
+  const slides = carousel.querySelectorAll(".carousel-item");
+  const carouselContainer = carousel.querySelector(".carousel-container");
 
-if (currentMode === "night") {
-  document.body.classList.add("night-mode");
-  toggleButton.classList.add("night-mode");
-}
+  // Actualiza el índice del carrusel específico
+  carouselIndices[carouselId] += step;
 
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("night-mode");
-  toggleButton.classList.toggle("night-mode");
-
-  if (document.body.classList.contains("night-mode")) {
-    localStorage.setItem("mode", "night");
-  } else {
-    localStorage.setItem("mode", "day");
+  // Asegura que el índice esté dentro de los límites
+  if (carouselIndices[carouselId] < 0) {
+    carouselIndices[carouselId] = slides.length - 1;
+  } else if (carouselIndices[carouselId] >= slides.length) {
+    carouselIndices[carouselId] = 0;
   }
-});
+
+  // Mueve el carrusel según el índice actualizado
+  const newTransform = `translateX(-${carouselIndices[carouselId] * 100}%)`;
+  carouselContainer.style.transition = "transform 0.5s ease-in-out"; // Añadimos transición suave
+  carouselContainer.style.transform = newTransform;
+}

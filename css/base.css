@@ -168,13 +168,12 @@ body {
 
 /* Secciones */
 .section {
-  min-height: 100vh;
-  padding: 0 20px 40px; /* Removido el padding-top para que el texto empiece más arriba */
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Alineación del contenido al inicio de la sección */
+  justify-content: flex-start;
   background-color: #fef6e4;
+  margin-top: 2rem; /* Agrega el espacio de 2rem en la parte superior */
 }
 
 h1 {
@@ -225,11 +224,13 @@ footer {
   margin-right: 5rem;
 }
 
+/* Imágenes de la galería */
 .gallery-image {
   width: 100%;
-  height: auto;
-  border-radius: 8px; /* Opcional: para bordes redondeados */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: sombra para las imágenes */
+  height: 100%; /* Asegura que las imágenes tengan altura y ancho iguales */
+  object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsionarse */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las imágenes */
   transition: transform 0.3s ease;
 }
 
@@ -274,6 +275,339 @@ footer {
   object-fit: cover; /* Ajusta la imagen para rellenar su espacio */
   border-radius: 8px; /* Bordes redondeados */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 0;
+}
+
+/* Contenedor común para galería y carrusel */
+.container {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+/* Contenedor de la galería */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 16px; /* Espacio entre las imágenes */
+  margin-top: 2rem;
+}
+
+/* Contenedor principal del carrusel de Kirby */
+.kirby-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las imágenes */
+}
+
+/* Estilo para los botones de navegación */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #ff69b4; /* Color rosa de Kirby */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 30px; /* Tamaño de los símbolos */
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón "Anterior" */
+.carousel-prev {
+  left: 20px;
+}
+
+/* Botón "Siguiente" */
+.carousel-next {
+  right: 20px;
+}
+
+/* Efecto hover para los botones */
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contenedor principal del carrusel de Lollipops */
+.lollipop-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: 0;
+  padding-top: 0;
+  width: 100%;
+  border-radius: 12px; /* Bordes redondeados */
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Las imágenes se ajustan para cubrir el espacio */
+  border-radius: 12px; /* Bordes redondeados para las imágenes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para las imágenes */
+}
+
+/* Estilo para los botones de navegación */
+.carousel-prev,
+.carousel-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #f0a500;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 1;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón "Anterior" */
+.carousel-prev {
+  left: 20px;
+}
+
+/* Botón "Siguiente" */
+.carousel-next {
+  right: 20px;
+}
+
+/* Efecto hover para los botones */
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contenedor principal del carrusel */
+.zodiac-carousel {
+  position: relative; /* Esto permite posicionar los botones sobre el carrusel */
+  display: flex;
+  justify-content: center; /* Centra las imágenes del carrusel */
+  overflow: hidden; /* Oculta las imágenes que no son visibles */
+  margin-top: 0; /* Elimina el margen superior extra */
+  padding-top: 0; /* Elimina el padding superior extra */
+  width: 100%;
+}
+
+/* Contenedor de las imágenes del carrusel */
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+/* Elementos del carrusel */
+.carousel-item {
+  flex: 0 0 100%;
+  box-sizing: border-box;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Asegura que las imágenes cubran el espacio */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los botones de navegación */
+.carousel-prev,
+.carousel-next {
+  position: absolute; /* Posiciona los botones sobre el carrusel */
+  top: 50%;
+  transform: translateY(-50%); /* Centra verticalmente */
+  background-color: rgba(121, 121, 121, 0.5);
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  z-index: 1; /* Asegura que los botones estén encima de las imágenes */
+  border-radius: 50%; /* Hace los botones redondeados */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón "Anterior" */
+.carousel-prev {
+  left: 10px; /* Ubica el botón a la izquierda */
+}
+
+/* Botón "Siguiente" */
+.carousel-next {
+  right: 10px; /* Ubica el botón a la derecha */
+}
+
+/* Efecto hover para los botones */
+.carousel-prev:hover,
+.carousel-next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#graphic-design {
+  margin-bottom: 0 !important;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas iguales */
+  gap: 2rem; /* Espacio entre columnas */
+  align-items: start; /* Alinea los elementos en la parte superior */
+  margin-top: 2rem; /* Espacio entre texto y columnas */
+  width: calc(100% - 10rem); /* Resta 5rem a cada lado */
+  margin-left: 5rem; /* Deja 5rem de margen a la izquierda */
+  margin-right: 5rem; /* Deja 5rem de margen a la derecha */
+  max-width: 100%; /* Asegura que ocupe todo el ancho disponible */
+}
+
+.contact-item {
+  background: #fff; /* Fondo blanco */
+  padding: 2rem; /* Mayor espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  display: flex;
+  flex-direction: column; /* Asegura que los elementos dentro se apilen en columna */
+  gap: 1.5rem; /* Espaciado entre los elementos dentro del contenedor */
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+  max-width: 600px; /* Máximo ancho para el formulario */
+}
+
+.contact-item input,
+.contact-item textarea {
+  width: 100%; /* Asegura que los campos ocupen todo el ancho del contenedor */
+  padding: 1rem; /* Espaciado interno para los campos */
+  border: 1px solid #ddd; /* Borde suave */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 1rem; /* Tamaño de texto cómodo */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+.contact-item button {
+  padding: 1rem 2rem; /* Espaciado en el botón */
+  color: white;
+  background-color: #4a1f80;
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer; /* Apunta como cursor */
+  transition: background-color 0.3s ease;
+}
+
+.contact-item button:hover {
+  background-color: #4a3cdd; /* Color del botón al pasar el mouse */
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item.instagram-feed {
+  padding-top: 2rem; /* Esto agregará espacio encima del contenedor */
+  margin-bottom: 2rem;
+}
+
+.contact-item.instagram-feed p {
+  margin-bottom: 1rem; /* Si quieres agregar más espacio después del texto */
+}
+
+.instagram-link {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  text-decoration: none;
+  color: #4a1f80;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+  color: #ffcc00;
+}
+
+.instagram-link i {
+  font-size: 1.5rem;
+}
+
+#contact {
+  padding: 2rem;
+  text-align: center;
+  background-color: #fef6e4;
+  color: #4a1f80;
+}
+
+.contact-email {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #4a1f80;
+  color: #ffcc00;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contact-email:hover {
+  background-color: #ffcc00;
+  color: #4a1f80;
+}
+
+.elfsight-app-8fb333cc-dc6d-4c38-8b90-d1b7f447849b {
+  margin-top: 2rem;
+  max-width: 100%;
 }
 
 /* Círculo de la flecha */
@@ -313,156 +647,4 @@ footer {
 /* Cambio de color al pasar el ratón */
 .scroll-btn:hover svg {
   fill: #ffcc00; /* Cambia el color de la flecha al pasar el mouse */
-}
-
-/* Animación de rotación cuando se hace clic */
-.scroll-btn.clicked svg {
-  transform: rotate(180deg); /* La flecha gira al hacer clic */
-}
-
-/* Modo Día (predeterminado) */
-body {
-  background-color: #fef6e4; /* Color de fondo claro */
-  color: #905bb5; /* Color del texto oscuro */
-}
-
-.top-bar {
-  background-color: #ffcc00; /* Barra superior amarilla */
-}
-
-/* Modo Noche */
-body.night-mode {
-  background-color: #2c3e50; /* Color de fondo oscuro */
-  color: #ecf0f1; /* Color del texto claro */
-}
-
-.top-bar.night-mode {
-  background-color: #34495e; /* Barra superior más oscura */
-}
-
-/* Estilos generales para el botón */
-#toggle-mode {
-  background-color: #fff; /* Fondo blanco */
-  border: 2px solid #333; /* Borde negro */
-  width: 60px; /* Ancho del botón */
-  height: 30px; /* Alto del botón */
-  border-radius: 50px; /* Esquinas redondeadas */
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: fixed; /* Lo hace fijo en la pantalla */
-  bottom: 20px; /* 20px desde la parte inferior */
-  left: 20px; /* 20px desde la parte izquierda */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
-  cursor: pointer;
-  padding: 0; /* Elimina cualquier padding */
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-/* El contenedor del círculo dentro del botón */
-.switch {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  position: relative;
-}
-
-/* El círculo que se moverá */
-.circle {
-  width: 24px; /* Círculo de 24px */
-  height: 24px; /* Círculo de 24px */
-  background-color: #333; /* Círculo negro */
-  border-radius: 50%;
-  position: absolute;
-  left: 2px; /* El círculo comienza 3px desde el borde izquierdo */
-  transition: transform 0.3s ease-in-out; /* Animación suave */
-}
-
-/* Modo noche: el círculo se mueve hacia la derecha */
-#toggle-mode.night-mode {
-  background-color: #333; /* Fondo negro cuando es modo noche */
-  border-color: #fff; /* Borde blanco cuando es modo noche */
-}
-
-#toggle-mode.night-mode .circle {
-  transform: translateX(30px); /* Mueve el círculo a la derecha */
-  background-color: #fff; /* El círculo se vuelve blanco */
-}
-
-/* Sol y luna - íconos */
-#toggle-mode .sun,
-#toggle-mode .moon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  color: #ffcc00; /* Color negro por defecto */
-  pointer-events: none; /* Evita que se haga clic en los íconos */
-}
-
-#toggle-mode .sun {
-  left: 8px; /* Sol a la izquierda */
-}
-
-#toggle-mode .moon {
-  right: 8px; /* Luna a la derecha */
-  display: none; /* La luna solo aparece en modo noche */
-}
-
-/* Cuando está en modo noche, se muestra el ícono de la luna */
-#toggle-mode.night-mode .moon {
-  display: block;
-  color: #ffcc00; /* Luna de color blanco */
-}
-
-#toggle-mode.night-mode .sun {
-  display: none;
-  color: #ffcc00; /* Sol oculto en modo noche */
-}
-
-/* Responsividad */
-@media (max-width: 768px) {
-  .top-bar {
-    padding: 0 2rem; /* Añadimos 2rem de padding a la izquierda y derecha */
-  }
-
-  #landing .main-nav {
-    gap: 1rem;
-  }
-
-  .section {
-    padding: 30px 10px;
-  }
-
-  #landing .logo-container {
-    gap: 5rem; /* Reduce el espacio para pantallas medianas */
-  }
-  h1,
-  h2 {
-    font-size: clamp(1.8rem, 6vw, 2.5rem); /* Ajuste del tamaño de los textos */
-  }
-}
-
-@media (max-width: 480px) {
-  .top-bar {
-    padding: 0 1.5rem; /* Reducir padding para pantallas muy pequeñas */
-  }
-
-  #landing .main-nav {
-    gap: 10px;
-  }
-
-  .section {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-  }
 }

@@ -220,3 +220,26 @@
     grid-template-columns: 1fr; /* 1 columna */
   }
 }
+
+/* Ajustes para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr; /* Para pantallas más pequeñas, se usa una columna */
+    margin-left: 2rem; /* Menos margen a los lados */
+    margin-right: 2rem; /* Menos margen a los lados */
+  }
+
+  .contact-item {
+    padding: 1.5rem; /* Reducir el espaciado interno */
+    margin-bottom: 2rem; /* Separar los elementos */
+    max-width: 100%; /* Asegura que ocupe el ancho disponible */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    margin-left: 2rem; /* Ajusta el margen en pantallas más pequeñas */
+    margin-right: 2rem;
+  }
+}
