@@ -1,6 +1,6 @@
 # Portfolio Personal
 
-Este es el portfolio personal de [Tu Nombre], un diseñador gráfico e ilustrador. El sitio está construido utilizando HTML y CSS, con un diseño elegante y minimalista en tonos cálidos de amarillo y morado.
+Este es el portfolio personal de Carla Hurtado Climent, una diseñadora gráfica e ilustradora. El sitio está construido utilizando HTML y CSS, con un diseño elegante y minimalista en tonos cálidos de amarillo y morado.
 
 ## Descripción
 
@@ -29,7 +29,7 @@ Para ver el proyecto en tu local, sigue estos pasos:
 1. Clona el repositorio:
 
    ```bash
-   git clone https://github.com/tu-usuario/portfolio.git
+   git clone https://github.com/carlawxrrior/portfolio.git
    ```
 
 2. Navega al directorio del proyecto:
